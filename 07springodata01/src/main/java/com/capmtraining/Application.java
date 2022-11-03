@@ -24,7 +24,7 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 	
-	@Bean(name="com.capmtraining.annotation.processor.MyODataServiceFactory")
+	@Bean(name="com.capmtraining.processor.MyODataServiceFactory")
 	public ODataServiceFactory getServiceFactory(){
 		return new MyODataServiceFactory("com.capmtraining");
 	}
@@ -34,7 +34,7 @@ public class Application {
 		return new VendorODataAgent();
 	}
 	
-	@Bean(name="com.capmtraining.entities.addressODataAgent")
+	@Bean(name="com.capmtraining.entities.AddressODataAgent")
 	public AddressOdataAgent addressODataAgent(){
 		return new AddressOdataAgent();
 	}

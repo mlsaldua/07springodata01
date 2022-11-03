@@ -34,8 +34,8 @@ public class MyODataAnnotationDs implements MyODataSource{
 	private static final AnnotationHelper ANNOTATION_HELPER = new AnnotationHelper();
 	private final Map<String, DataStore<Object>> dataStores = new HashMap<String, DataStore<Object>>();
 	  
-	//@Getter
-	//@Setter
+	@Getter
+	@Setter
 	private ApplicationContext appContext;
 	
 	public Map<String, Object> getoDataAgents() {
@@ -238,10 +238,5 @@ public class MyODataAnnotationDs implements MyODataSource{
 			throws ODataNotImplementedException, EdmException, ODataApplicationException {
 		ODataInterface oDataInterface = this.getODataInterfaceByName(this.getODataBeanAgentName(entitySet));
 		oDataInterface.updateEntity(data);
-	}
-
-	public void setAppContext(ApplicationContext applicationContext) {
-		// TODO Auto-generated method stub
-		
 	}
 }

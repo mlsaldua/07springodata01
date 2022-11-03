@@ -23,7 +23,7 @@ import com.capmtraining.util.SpringUtils;
 
 , initParams = {
 		@WebInitParam(name = "javax.ws.rs.Application", value = "org.apache.olingo.odata2.core.rest.app.ODataApplication"),
-		@WebInitParam(name = "org.apache.olingo.odata2.service.factory", value = "com.capmtraining.annotation.processor.MyODataProcessor") 
+		@WebInitParam(name = "org.apache.olingo.odata2.service.factory", value = "com.capmtraining.processor.MyODataProcessor") 
 		}
 
 )
@@ -32,7 +32,7 @@ public class BuilderODataServlet extends ODataServlet {
 
 	private static final long serialVersionUID = 1L;
 
-	private String oDataServiceFactoryBeanName = "com.capmtraining.annotation.processor.MyODataServiceFactory";
+	private String oDataServiceFactoryBeanName = "com.capmtraining.processor.MyODataServiceFactory";
 
 	@Override
 	public void init(ServletConfig servletConfig) throws ServletException {
