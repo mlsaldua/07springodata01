@@ -7,8 +7,11 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.olingo.odata2.api.edm.EdmEntitySet;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.capmtraining.annotation.processor.MyODataAnnotationDs;
 import com.capmtraining.annotation.processor.ODataInterface;
 import com.capmtraining.service.IVendorPersistence;
 
@@ -16,10 +19,12 @@ public class VendorODataAgent implements ODataInterface {
 	
 	@Autowired
 	IVendorPersistence vendorAPI;
+	private static final Logger log=LoggerFactory.getLogger(MyODataAnnotationDs.class);
 	
 	@Override
 	public List<?> getEntitySet() {
 		// TODO Auto-generated method stub
+		log.info("VendorSet_GET_ENTITYSET Called");
 		System.out.println("VendorSet_GET_ENTITYSET Called");
 		return vendorAPI.findAll();
 		/*

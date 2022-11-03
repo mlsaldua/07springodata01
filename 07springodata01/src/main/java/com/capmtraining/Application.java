@@ -10,6 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.scheduling.annotation.EnableAsync;
 
 import com.capmtraining.annotation.processor.MyODataServiceFactory;
+import com.capmtraining.entities.AddressOdataAgent;
 import com.capmtraining.entities.VendorODataAgent;
 
 @SpringBootApplication(scanBasePackages = "com.capmtraining")
@@ -23,7 +24,7 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 	
-	@Bean(name="com.capmtraining.processor.MyODataServiceFactory")
+	@Bean(name="com.capmtraining.annotation.processor.MyODataServiceFactory")
 	public ODataServiceFactory getServiceFactory(){
 		return new MyODataServiceFactory("com.capmtraining");
 	}
@@ -31,5 +32,10 @@ public class Application {
 	@Bean(name="com.capmtraining.entities.VendorODataAgent")
 	public VendorODataAgent vendorODataAgent(){
 		return new VendorODataAgent();
+	}
+	
+	@Bean(name="com.capmtraining.entities.addressODataAgent")
+	public AddressOdataAgent addressODataAgent(){
+		return new AddressOdataAgent();
 	}
 }

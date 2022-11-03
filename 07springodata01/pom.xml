@@ -13,7 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>07springodata01</name>
-	<description>Postgre on Cloud</description>
+	<description>Java Odata</description>
 	<properties>
 		<java.version>1.8</java.version>
 		<org.eclipse.persistence.version>2.7.3</org.eclipse.persistence.version>
