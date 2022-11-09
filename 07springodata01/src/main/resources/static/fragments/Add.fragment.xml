@@ -1,0 +1,42 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+	<Dialog showHeader="true" title="Add">
+		<content>
+		<f:SimpleForm id="SimpleFormChange354"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="Vendor"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="Company Name" />
+				<Input id="name" value="{/vendor/CompanyName}" />
+				<Label text="First Name" />
+				<Input value="{/vendor/FirstName}"/>
+				<Label text="Last Name"/>
+				<Input value="{/vendor/LastName}"/>
+				<Label text="Website" />
+				<Input value="{/vendor/Website}"/>
+				<Label text="Email" />
+				<Input value="{/vendor/Email}" />
+				<Label text="Reg Date/GST No" />
+				<Input value="{/vendor/RegDate}" />
+			</f:content>
+		</f:SimpleForm>	
+		</content>
+		<buttons>
+			<Button text="Save" press="onSave"></Button>
+			<Button text="Close" press="onClose"></Button>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>
